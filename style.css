@@ -22,3 +22,21 @@ body {
   padding: 20px;
   position: relative;
 }
+
+/* Table */
+.table-container {
+  margin-top: 20px;
+}
+.table th,
+.table td {
+  padding: 10px;
+  border-color: #333;
+  color: #fff;
+}
+.table th,
+.table td {
+  background-color: #2a2a2a;
+}
+.table tbody tr {
+  background-color: #222;
+}
