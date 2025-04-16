@@ -46,3 +46,34 @@ function closeNewSidebar(event) {
     console.error("New sidebar element not found");
   }
 }
+
+// close sidebar when clicking outside of it
+sidebar.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+newSidebar.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+// close sidebar when clicking outside of it
+document.addEventListener("click", (event) => {
+  const isClickOnDropdown =
+    event.target.closest("#tableDropdown") ||
+    event.target.closest(".dropdown-menu");
+  const isClickOnNewButton = event.target.closest(".btn-new");
+
+  if (sidebar.classList.contains("open")) {
+    const isClickOnSidebar = sidebar.contains(event.target);
+    if (!isClickOnSidebar && !isClickOnDropdown) {
+      closeSidebar(event);
+    }
+  }
+  if (newSidebar.classList.contains("open")) {
+    const isClickInsideNewSidebar = newSidebar.contains(event.target);
+    if (!isClickInsideNewSidebar && !isClickOnNewButton) {
+      console.log("Clicked outside, closing new sidebar");
+      closeNewSidebar();
+    }
+  }
+});
