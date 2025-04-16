@@ -33,7 +33,7 @@
                     <li><a class="dropdown-item" href="#" onclick="openSidebar(event)">Duplicate</a></li>
                 </ul>
             </div>
-            <button class="btn btn-new">New</button>
+            <button class="btn btn-new" onclick="openNewSidebar(event)">New</button>
         </div>
         <!-- End Table Header -->
 
@@ -72,7 +72,7 @@
 
     <!-- Sidebar Option -->
     <div class="sidebar" id="sidebar">
-        <button class="close-sidebar" onclick="closeSidebar()">✖</button>
+        <button class="close-sidebar" onclick="closeSidebar(event)">✖</button>
         <ul>
             <li>View options</li>
             <li>Layout</li>
@@ -92,7 +92,7 @@
 
     <!-- New Sidebar (for form input) -->
     <div class="new-sidebar" id="new-sidebar">
-        <button class="close-sidebar">✖</button>
+        <button class="close-sidebar" onclick="closeNewSidebar(event)">✖</button>
         <h2>New Page</h2>
         <form>
             <div class="form-group">
