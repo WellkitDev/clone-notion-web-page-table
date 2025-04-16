@@ -75,3 +75,31 @@ body {
   background-color: #0b5ed7;
   transform: scale(1.05);
 }
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #2a2a2a;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+.sidebar.open {
+  right: 0;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px 0;
+  color: #fff;
+  cursor: pointer;
+}
+.sidebar ul li:hover {
+  color: #0d6efd;
+}
